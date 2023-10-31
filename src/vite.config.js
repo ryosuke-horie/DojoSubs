@@ -6,8 +6,7 @@ import path from 'path';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/scss/app.scss', 'resources/js/app.js'],
-            ssr: ['resources/js/ssr.js'],
+            input: ['resources/js/app.js'],
             refresh: true,
         }),
         vue({
@@ -21,16 +20,13 @@ export default defineConfig({
     ],
     server: {
         host: true,
-        hmr: {
-            host: '192.168.100.230',
-        },
+        // hmr: {
+        //     host: '192.168.100.230',
+        // },
         watch: {
             usePolling: true,
         },
-        port: 5174
-    },
-    ssr: {
-        noExternal: ['@inertiajs/server'],
+        port: 5173
     },
     resolve: {
         alias: {
