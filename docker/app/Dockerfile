@@ -30,5 +30,8 @@ RUN composer self-update
 RUN curl -fsSL https://rpm.nodesource.com/setup_18.x | bash -
 RUN dnf -y install nodejs
 
+# npmのアップデート
+RUN npm install -g npm@10.2.3
+
 # コンテナのディレクトリ指定
 WORKDIR /var/www/html
